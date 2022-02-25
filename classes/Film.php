@@ -5,6 +5,7 @@ class Film {
     private $title;
     private $author;
     private $director;
+    public $poster;
     //creo i metodi che ci permetteranno di utilizzare queste variabili dentro index.php
     //il primo metodo sarà un costruttore, che renderà obbligatoria la dichiarazione di attributi da valorizzare. Il costruttore deve essere una function public
     public function __construct($_title, $_author, $_director){
@@ -16,7 +17,6 @@ class Film {
     public function getFilm(){
         return "{$this -> title} {$this -> author} {$this -> director}";
     }
-
 }
 
 
