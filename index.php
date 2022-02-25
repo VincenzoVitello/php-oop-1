@@ -6,38 +6,31 @@
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà -->
 <?php
 //icludo file della classe
-require_once __DIR__.'/classes/Classes.php';
+require_once __DIR__.'/classes/Film.php';
 //creo array in cui creo nuovi oggetti appartenenti alla classe inclusa
 $filmLibrary = [
-    new Film [
-        'poster' => 'https://m.media-amazon.com/images/I/61rv+Rnsu6L._AC_.jpg',
+    new Film (
         'The Avengers',
         'Joss Whedon',
-        'Joss Whedon',
-        'releaseDate' => '25 aprile 2012'
-    ],
-    new Film [
-        'poster' => 'https://www.lospaziobianco.it/wp-content/uploads/2015/02/avengers-poster-ae636.jpg',
+        'Joss Whedon'
+    ),
+    new Film (
         'Avengers: Age of Ultron'
         'Joss Whedon',
-        'Joss Whedon',
-        'releaseDate' => '22 aprile 2015'
-    ],
-    new Film [
-        'poster' => 'https://m.media-amazon.com/images/I/71xu1PT1dwL._AC_SY606_.jpg',
+        'Joss Whedon'
+    ),
+    new Film (
+         
         'Avengers: Infinity War',
         'Christopher Markus e Stephen McFeely',
-        'Anthony e Joe Russo',
-        'releaseDate' => '25 aprile 2018'
-    ],
-    new Film [
-        'poster' => 'https://pad.mymovies.it/filmclub/2018/12/029/locandina.jpg',
+        'Anthony e Joe Russo'
+    ),
+    new Film (
         'The Avengers: Endgame',
         'Christopher Markus e Stephen McFeely',
-        'Anthony e Joe Russo',
-        'releaseDate' => '24 aprile 2019'
-    ]
-]
+        'Anthony e Joe Russo'
+    )
+];
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +46,7 @@ $filmLibrary = [
         <ul>
             <?php 
                 foreach($filmLibrary as $element){
-                    echo "<li> <img src='{element['poster']}'></li>
-                          <li>{element->getFilm()}</li>
-                          <li>{element['releaseDate']}</li>";
+                    echo "<li>{$element->getFilm()}</li>";
                 }
             ?>
         </ul>
